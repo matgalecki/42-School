@@ -1,44 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgalecki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 20:10:11 by mgalecki          #+#    #+#             */
-/*   Updated: 2024/03/10 17:22:20 by mgalecki         ###   ########.fr       */
+/*   Created: 2024/03/10 17:51:52 by mgalecki          #+#    #+#             */
+/*   Updated: 2024/03/10 17:52:04 by mgalecki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_bzero(void *s, size_t n)
 {
-	unsigned char	cc;
 	char			*ptr;
 
 	ptr = s;
-	cc = c;
 	while (n > 0)
 	{
-		*ptr = cc;
+		*ptr = 0;
 		ptr++;
 		n--;
 	}
 	return (s);
 }
 /*
+#include <strings.h>
 #include <stdio.h>
-#include <string.h>
-int main ()
+int	main()
 {
-	char buffer [10] = "kkkkkkkkkk";
-	ft_memset(buffer,'t', 3);
+	char buffer[10] = "aaaaaaaaaa";
+	ft_bzero(buffer, 3);
 	printf("%s\n", buffer);
-	
-	char buffer1 [10] = "kkkkkkkkkk";
-	memset(buffer1,'t', 3);
-	printf("%s", buffer1);
-	return (0);
+
+	char buffer1[10] = "aaaaaaaaaa";
+	bzero(buffer1, 3);
+	printf("%s\n", buffer1);
+
+	return(0);
 }
 */

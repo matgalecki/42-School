@@ -1,44 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgalecki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 20:10:11 by mgalecki          #+#    #+#             */
-/*   Updated: 2024/03/10 17:22:20 by mgalecki         ###   ########.fr       */
+/*   Created: 2024/03/10 18:51:59 by mgalecki          #+#    #+#             */
+/*   Updated: 2024/03/10 18:53:25 by mgalecki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	cc;
-	char			*ptr;
+	size_t		i;
+	char		*s;
+	char		*d;
 
-	ptr = s;
-	cc = c;
-	while (n > 0)
+	i = 0;
+	s = (char *)src;
+	d = (char *)dest;
+	while (i < n)
 	{
-		*ptr = cc;
-		ptr++;
-		n--;
+		d[i] = s[i];
+		i++;
 	}
-	return (s);
+	return (dest);
 }
-/*
+/* 
 #include <stdio.h>
 #include <string.h>
-int main ()
+int	main ()
 {
-	char buffer [10] = "kkkkkkkkkk";
-	ft_memset(buffer,'t', 3);
-	printf("%s\n", buffer);
-	
-	char buffer1 [10] = "kkkkkkkkkk";
-	memset(buffer1,'t', 3);
-	printf("%s", buffer1);
-	return (0);
+	char *src1 = "aqwerdsa";
+	char dest1[10];
+	ft_memcpy(dest1,src1, 3);
+	printf("%s\n", dest1);
+
+	char *src2 = "aqwerdsa";
+	char dest2[10];
+	memcpy(dest2,src2, 3);
+	printf("%s\n", dest2);
+	return(0);
 }
-*/
+ */
