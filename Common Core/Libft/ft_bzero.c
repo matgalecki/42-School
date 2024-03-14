@@ -5,25 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgalecki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/10 17:51:52 by mgalecki          #+#    #+#             */
-/*   Updated: 2024/03/10 17:52:04 by mgalecki         ###   ########.fr       */
+/*   Created: 2024/03/14 21:01:24 by mgalecki          #+#    #+#             */
+/*   Updated: 2024/03/14 21:01:30 by mgalecki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include "libft.h"
 #include <stddef.h>
 
-void	*ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	char			*ptr;
-
-	ptr = s;
-	while (n > 0)
-	{
-		*ptr = 0;
-		ptr++;
-		n--;
-	}
-	return (s);
+	while (n--)
+		*(unsigned char *)s++ = 0;
 }
 /*
 #include <strings.h>

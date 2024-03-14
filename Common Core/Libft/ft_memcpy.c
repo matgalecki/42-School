@@ -5,11 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgalecki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/10 18:51:59 by mgalecki          #+#    #+#             */
-/*   Updated: 2024/03/10 18:53:25 by mgalecki         ###   ########.fr       */
+/*   Created: 2024/03/14 21:05:37 by mgalecki          #+#    #+#             */
+/*   Updated: 2024/03/14 21:05:44 by mgalecki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include "libft.h"
 #include <stddef.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)

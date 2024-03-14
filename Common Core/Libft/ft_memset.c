@@ -5,11 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgalecki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 20:10:11 by mgalecki          #+#    #+#             */
-/*   Updated: 2024/03/10 17:22:20 by mgalecki         ###   ########.fr       */
+/*   Created: 2024/03/14 21:08:16 by mgalecki          #+#    #+#             */
+/*   Updated: 2024/03/14 21:08:20 by mgalecki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include "libft.h"
 #include <stddef.h>
 
 void	*ft_memset(void *s, int c, size_t n)

@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgalecki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 19:27:02 by mgalecki          #+#    #+#             */
-/*   Updated: 2024/02/28 20:04:33 by mgalecki         ###   ########.fr       */
+/*   Created: 2024/03/14 20:59:51 by mgalecki          #+#    #+#             */
+/*   Updated: 2024/03/14 20:59:57 by mgalecki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 #include <stddef.h>
 
 size_t	ft_strlen(char const *str)
