@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -31,15 +30,23 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (d);
 }
-/*
+/* 
 #include <stdio.h>
+#include <string.h> 
 int	main()
 {
 	char	src1[] = "abcdefg";
 	size_t size = sizeof(src1);
 	char	dest1[] = "awed12312332";
 	void *result = ft_memmove(dest1,src1, size); 
-	printf("%s", (char *)result);
+	printf("%s\n", (char *)result);
+	return (0);
+
+	char	src2[] = "abcdefg";
+	size_t size2 = sizeof(src2);
+	char	dest2[] = "awed12312332";
+	void *result1 = memmove(dest2,src2, size2); 
+	printf("%s\n", (char *)result1);
 	return (0);
 }
-*/
+ */

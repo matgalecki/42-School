@@ -1,43 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgalecki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/14 21:08:16 by mgalecki          #+#    #+#             */
-/*   Updated: 2024/03/14 21:08:20 by mgalecki         ###   ########.fr       */
+/*   Created: 2024/03/16 21:13:26 by mgalecki          #+#    #+#             */
+/*   Updated: 2024/03/16 21:13:30 by mgalecki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_tolower(int c)
 {
-	unsigned char	cc;
-	char			*ptr;
-
-	ptr = s;
-	cc = c;
-	while (n > 0)
-	{
-		*ptr = cc;
-		ptr++;
-		n--;
-	}
-	return (s);
+	if (c >= 'A' && c <= 'Z')
+		c = c + 32;
+	return (c);
 }
-/*
+/* 
 #include <stdio.h>
-#include <string.h>
-int main ()
+#include <ctype.h>
+int	main()
 {
-	char buffer [10] = "kkkkkkkkkk";
-	ft_memset(buffer,'t', 3);
-	printf("%s\n", buffer);
-	
-	char buffer1 [10] = "kkkkkkkkkk";
-	memset(buffer1,'t', 3);
-	printf("%s", buffer1);
+	printf("%d\n", ft_tolower('Z'));
+	printf("%d\n", tolower('Z'));
 	return (0);
 }
-*/
+ */
