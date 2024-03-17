@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgalecki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 21:23:38 by mgalecki          #+#    #+#             */
-/*   Updated: 2024/03/16 21:23:50 by mgalecki         ###   ########.fr       */
+/*   Created: 2024/03/17 13:15:45 by mgalecki          #+#    #+#             */
+/*   Updated: 2024/03/17 13:15:47 by mgalecki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	while (*s)
+	size_t	i;
+
+	i = 0;
+	while ((s1[i] || s2[i]) && i < n)
 	{
-		if (*s == (char) c)
-			return ((char *)s);
-		s++;
+		if ((unsigned char)s1[i] > (unsigned char)s2[i])
+			return (1);
+		if ((unsigned char)s1[i] < (unsigned char)s2[i])
+			return (-1);
+		i++;
 	}
-	if (*s == (char)c)
-		return ((char *)s);
-	else
-		return (NULL);
+	return (0);
 }
 /* 
 #include <string.h>
 #include <stdio.h>
 int	main()
 {
-	printf("%s\n", ft_strchr("asdsatda", '\0'));
-	printf("%s\n", strchr("asdsatda", '\0'));
+	printf("%d\n", ft_strncmp("asdsatda", "bsdsatda", 5));
+	printf("%d\n", strncmp("asdsatda", "bsdsatda", 5));
 	return(0);
 }
  */

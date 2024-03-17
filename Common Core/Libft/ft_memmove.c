@@ -40,7 +40,6 @@ int	main()
 	char	dest1[] = "awed12312332";
 	void *result = ft_memmove(dest1,src1, size); 
 	printf("%s\n", (char *)result);
-	return (0);
 
 	char	src2[] = "abcdefg";
 	size_t size2 = sizeof(src2);

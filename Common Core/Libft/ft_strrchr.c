@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgalecki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 21:23:38 by mgalecki          #+#    #+#             */
-/*   Updated: 2024/03/16 21:23:50 by mgalecki         ###   ########.fr       */
+/*   Created: 2024/03/17 12:26:27 by mgalecki          #+#    #+#             */
+/*   Updated: 2024/03/17 12:26:31 by mgalecki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
+	char const	*result;
+
+	result = NULL;
 	while (*s)
 	{
-		if (*s == (char) c)
-			return ((char *)s);
+		if (*s == (char)c)
+			result = s;
 		s++;
 	}
 	if (*s == (char)c)
-		return ((char *)s);
-	else
-		return (NULL);
+		result = s;
+	return ((char *)result);
 }
 /* 
 #include <string.h>
 #include <stdio.h>
 int	main()
 {
-	printf("%s\n", ft_strchr("asdsatda", '\0'));
-	printf("%s\n", strchr("asdsatda", '\0'));
+	printf("%s\n", ft_strrchr("asdsatda", 't'));
+	printf("%s\n", strrchr("asdsatda", 't'));
 	return(0);
 }
- */
+*/
