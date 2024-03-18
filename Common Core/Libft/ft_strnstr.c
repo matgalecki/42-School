@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	b;
 	size_t	l;
@@ -22,10 +22,10 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 	l = 0;
 	while (big[b] && b < len)
 	{
-		while(big[b + l] == little[l] && big[b + l] && b + l < len)
+		while (big[b + l] == little[l] && big[b + l] && b + l < len)
 		{
 			l++;
-			if(little[l] == 0)
+			if (little[l] == 0)
 				return ((char *)big + b);
 		}
 		b++;
@@ -35,7 +35,7 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 }
 /* 
 #include <stdio.h>
-#include <string.h>
+#include <bsd/string.h>
 
 int	main()
 {	
@@ -50,4 +50,4 @@ int	main()
 	printf("%s\n", result2);
 	return(0);
 }
- */
+*/
