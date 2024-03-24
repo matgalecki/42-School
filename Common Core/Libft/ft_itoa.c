@@ -11,10 +11,61 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char *ft_itoa(int n)
+static size_t	ft_get_digits(int n)
 {
-	char 	*result;
 	size_t	i;
 
-	result = (char *)malloc()
+	i = 1;
+	while (n)
+	{
+		n = n / 10;
+		if (n)
+			i++;
+	}
+	return (i);
 }
+
+char	*ft_itoa(int n)
+{
+	char		*result;
+	size_t		digits;
+	long int	number;
+
+	number = n;
+	digits = ft_get_digits(n);
+	if (n < 0)
+	{
+		number = number * (-1);
+		digits++;
+	}
+	result = (char *)malloc(sizeof(char) * (digits + 1));
+	if (!result)
+		return (NULL);
+	*(result + digits) = '\0';
+	while (digits--)
+	{
+		*(result + digits) = number % 10 + '0';
+		number = number / 10;
+	}
+	if (n < 0)
+		*(result + 0) = '-';
+	return (result);
+}
+/* 
+#include <stdio.h>
+int	main ()
+{
+	int	num1 = -767890320;
+	char *result = ft_itoa(num1);
+
+	if (result)
+	{
+		printf("%s\n", result);
+		//printf("odst\n");
+		free(result);
+	}
+	else
+		printf("Memory allocation error");
+	return (0);
+}
+*/

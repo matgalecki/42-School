@@ -42,4 +42,5 @@ int	main()
 	printf("%d\n", ft_atoi("         +1233a1323"));
 	printf("%d", atoi("         +1233a1323"));
 	return (0);
-} */
+}
+ */
