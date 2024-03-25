@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgalecki <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/24 21:53:38 by mgalecki          #+#    #+#             */
-/*   Updated: 2024/03/24 21:53:40 by mgalecki         ###   ########.fr       */
+/*   Created: 2024/03/25 19:45:14 by mgalecki          #+#    #+#             */
+/*   Updated: 2024/03/25 19:45:16 by mgalecki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (s[i])
 	{
-		(*f)(i, &s[i]);
+		write(fd, &s[i], 1);
 		i++;
 	}
 }
-/*
-void	ft_modify_string(unsigned int i, char *c)
+/* 
+int main()
 {
-	if (i < 5 && *c >= '0' && *c <= '9')
-		*c = *c + 1;
-}
-
-#include <stdio.h>
-
-int main ()
-{
-	char	str[] = "6712sjabsh231";
-	printf("Before modification: %s\n", str);
-	ft_striteri(str, ft_modify_string);
-	printf("After modification: %s\n", str);
+	char *s = "slasdknkl5";
+	int fd = 1;
+	ft_putstr_fd(s, fd);
 	return (0);
 }
 */
