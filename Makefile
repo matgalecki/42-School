@@ -26,7 +26,8 @@ NAME = libft.a
 LIBC = ar rcs
 CC = gcc
 RM = rm -f
-CFFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
+
 
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
